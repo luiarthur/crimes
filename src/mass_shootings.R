@@ -90,3 +90,5 @@ plotPost(p[2,] - p[1,], main='',
 abline(v=0, lty=2, col='grey')
 
 print(post_summary(as.matrix(cbind(p[2,] - p[1,])), alpha=.05))
+
+#mean(p[2,] > p[1,])

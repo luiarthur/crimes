@@ -6,15 +6,15 @@ illnesses.
 
 Using a (Bayesian) logistic regression, a model was fit to data provided by
 [Mother Jones' Investigation][1]. The response is whether the offender
-purchased his weapons for the shooting legally (Y/N). The predictor is
-whether the offender had prior signs of mental illness. An intercept term
-is added to the predictor to account for bias.
+purchased his weapons for the shooting legally (Y/N). The predictor is whether
+the offender had prior signs of mental illness(Y/N). An intercept term is added
+to the predictor to account for bias.
 
-Results from the analysis show that the difference in proportion of legal
-gun-purchases by someone with prior signs of mental health issues is 17%
-(-0.4%, 34.5%) higher than that of someone with no prior signs of mental health
-issues. That is if those with prior mental health issues were identified and
-refused fire-arms, 17% of the shootings may have been prevented or resulted in
-fewer fatalities.
+Results from the analysis show that of the offenders in the mass-shootings, the
+proportion of legal gun-purchases by someone with prior signs of mental health
+issues is 17% (-0.4%, 34.5%) higher than that of someone with no prior signs of
+mental health issues. That is if those with prior mental health issues were
+identified and refused fire-arms, 17% of the shootings may have been prevented
+or resulted in fewer fatalities.
 
 [1]: https://docs.google.com/spreadsheets/d/1XV4mZi3gYDgwx5PrLwqqHTUlHkwkV-6uy_yeJh3X46o/edit#gid=0
