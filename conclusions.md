@@ -15,7 +15,7 @@ someone with prior signs of mental health issues is 17% (-0.4%, 34.5%) higher
 than that of someone with no prior signs of mental health issues.
 
 Possible implications are that a stronger vetting process needs to be
-implemented to check for signs of mental health issues before vendors deal
+implemented to check for signs of mental health issues before vendors issue
 fire-arms. Perhaps if those with prior mental health issues were identified and
 refused fire-arms, 17% of the shootings could have been prevented.
 
