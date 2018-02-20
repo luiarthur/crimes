@@ -71,24 +71,29 @@ plot(table(shoot$WeaponsLegal, shoot$Prior), main='',
 ### Binarized ###
 mod = glm(shoot$WeaponsLegalYN ~ shoot$MentallyIll, family='binomial')
 summary(mod)
-table(shoot$WeaponsLegalYN, shoot$MentallyIll)
+tab = table(shoot$WeaponsLegalYN, shoot$MentallyIll)
+rownames(tab) = c("illegal", 'legal')
+colnames(tab) = c('not-ill', 'ill')
 
 #source("logisticRegBayes.R")
 ### Bayesian Model ###
 y = shoot$WeaponsLegalYN
 X = cbind(1,shoot$MentallyIll)
-out = logisticRegBayes(y, X, cs=1, thin=30, burn=2000)
+out = logisticRegBayes(y, X, cs=1, thin=30, burn=2000, B=2000)
 b = t(sapply(out, function(o) o$coef))
 post_summary(b)
 plotPosts(b)
 
 X_new = cbind(1,c(0,1))
 p = sigmoid(X_new %*% t(b))
+plotPosts(t(p))
 
 plotPost(p[2,] - p[1,], main='',
          xlab='Difference in proportion of legal gun-purchases by \n someone with history of mental health issues and someone with no history', trace=FALSE)
 abline(v=0, lty=2, col='grey')
 
-print(post_summary(as.matrix(cbind(p[2,] - p[1,])), alpha=.05))
+print(post_summary(as.matrix(p[2,] - p[1,]), alpha=.05))
 
-#mean(p[2,] > p[1,])
+print(mean(p[2,] > p[1,]))
+
+t(t(tab) / colSums(tab))
