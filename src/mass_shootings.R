@@ -4,6 +4,8 @@ library(rcommon)
 source("logisticRegBayes.R")
 
 states = read.csv('../dat/states.csv')
+right = function(x,n) substr(x, nchar(x)-n+1, nchar(x))
+left = function(x,n) substr(x, 1, n)
 
 shoot = read.csv('../dat/mass_shooting_us.csv')
 last = function(x) x[length(x)]
@@ -48,6 +50,9 @@ counts = sqldf('
   SELECT * FROM counts
   ORDER BY counts.sumVictims DESC
 ')
+
+
+
 
 ### Plot Map ###
 #cutoff = quantile(counts$sum, c(.3, .5, .9, 1))

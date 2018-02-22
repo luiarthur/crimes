@@ -1,2 +1,7 @@
+# Ignore these
 *.csv
 *.json
+
+# But don't ignore these
+!states.csv
+!mass_shooting_us.csv
